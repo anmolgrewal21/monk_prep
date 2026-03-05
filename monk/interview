@@ -1,0 +1,3 @@
+This will be a live coding round that will focus on building a full-stack application with some system design elements, primarily schema design. This round is fully AI-enabled except for the initial planning stage - afterwards it's fully open book and you can use whatever day-to-day tools you normally use. The problem will involve the invoice lifecycle, so familiarity with basic invoicing lifecycle concepts and design (similar to those used by Stripe and Quickbooks online) will be helpful.
+
+To prepare, I recommend setting up a basic React or Next.js app  Using a local JSON file as your "database", only thing that matters here is you can read/write data and persist data.
