@@ -1,0 +1,233 @@
+{
+  "invoices": [
+    {
+      "id": "inv_001",
+      "invoice_number": "INV-001",
+      "status": "paid",
+      "customer_id": "cust_001",
+      "date": "2026-02-20T00:00:00Z",
+      "line_item": [
+        {
+          "id": "li_001",
+          "desc": "Website Development",
+          "amount": 50000,
+          "line_total": 50000
+        },
+        {
+          "id": "li_002",
+          "desc": "Logo Design",
+          "amount": 30000,
+          "line_total": 30000
+        },
+        {
+          "id": "li_003",
+          "desc": "Hosting (Annual)",
+          "amount": 20000,
+          "line_total": 20000
+        }
+      ],
+      "total": 100000,
+      "balance_due": 0
+    },
+    {
+      "id": "inv_1772658163305_jdip8",
+      "invoice_number": "INV-002",
+      "status": "open",
+      "customer_id": "cust_002",
+      "date": "2026-03-04T21:02:43.305Z",
+      "line_item": [
+        {
+          "id": "li_1772658163305_3bb1b",
+          "desc": "ElevenLabs Enterprise 6-mo — March 2026",
+          "amount": 2000000,
+          "line_total": 2000000
+        }
+      ],
+      "total": 2000000,
+      "balance_due": 2000000
+    },
+    {
+      "id": "inv_1772658450006_cv416",
+      "invoice_number": "INV-003",
+      "status": "open",
+      "customer_id": "cust_001",
+      "date": "2026-03-04T21:07:30.006Z",
+      "line_item": [
+        {
+          "id": "li_1772658450006_1csjk",
+          "desc": "Jane Smith Web Retainer — February 2026",
+          "amount": 500000,
+          "line_total": 500000
+        }
+      ],
+      "total": 500000,
+      "balance_due": 500000
+    }
+  ],
+  "customers": [
+    {
+      "id": "cust_001",
+      "name": "Jane Smith",
+      "email": "jane@example.com"
+    },
+    {
+      "id": "cust_002",
+      "name": "ElevenLabs Inc.",
+      "email": "billing@elevenlabs.io"
+    }
+  ],
+  "payments": [
+    {
+      "id": "pay_1771707021254_a9ux0",
+      "invoice_id": "inv_001",
+      "amount": 2000,
+      "date": "2026-02-21T20:50:21.254Z"
+    },
+    {
+      "id": "pay_1771707169651_xnuwu",
+      "invoice_id": "inv_001",
+      "amount": 10000,
+      "date": "2026-02-21T20:52:49.651Z"
+    },
+    {
+      "id": "pay_1771707268401_eqeto",
+      "invoice_id": "inv_001",
+      "amount": 88000,
+      "date": "2026-02-21T20:54:28.401Z"
+    }
+  ],
+  "contracts": [
+    {
+      "id": "contract_001",
+      "customer_id": "cust_002",
+      "name": "ElevenLabs Enterprise 6-mo",
+      "billing_type": "recurring",
+      "total_value": 12000000,
+      "start_date": "2026-03-01T00:00:00.000Z",
+      "end_date": "2026-08-31T00:00:00.000Z",
+      "payment_terms_days": 30,
+      "created_at": "2026-02-28T00:00:00.000Z"
+    },
+    {
+      "id": "contract_1772658435255_p6yod",
+      "customer_id": "cust_001",
+      "name": "Jane Smith Web Retainer",
+      "billing_type": "recurring",
+      "total_value": 1500000,
+      "start_date": "2026-03-01T00:00:00.000Z",
+      "end_date": "2026-05-27T23:00:00.000Z",
+      "payment_terms_days": 30,
+      "created_at": "2026-03-04T21:07:15.255Z"
+    }
+  ],
+  "billing_events": [
+    {
+      "id": "be_001",
+      "contract_id": "contract_001",
+      "customer_id": "cust_002",
+      "scheduled_date": "2026-03-01T00:00:00.000Z",
+      "amount": 2000000,
+      "status": "invoiced",
+      "period_start": "2026-03-01T00:00:00.000Z",
+      "period_end": "2026-03-31T00:00:00.000Z",
+      "description": "ElevenLabs Enterprise 6-mo — March 2026",
+      "invoice_id": "inv_1772658163305_jdip8"
+    },
+    {
+      "id": "be_002",
+      "contract_id": "contract_001",
+      "customer_id": "cust_002",
+      "scheduled_date": "2026-04-01T00:00:00.000Z",
+      "amount": 2000000,
+      "status": "ready",
+      "period_start": "2026-04-01T00:00:00.000Z",
+      "period_end": "2026-04-30T00:00:00.000Z",
+      "description": "ElevenLabs Enterprise 6-mo — April 2026",
+      "invoice_id": null
+    },
+    {
+      "id": "be_003",
+      "contract_id": "contract_001",
+      "customer_id": "cust_002",
+      "scheduled_date": "2026-05-01T00:00:00.000Z",
+      "amount": 2000000,
+      "status": "ready",
+      "period_start": "2026-05-01T00:00:00.000Z",
+      "period_end": "2026-05-31T00:00:00.000Z",
+      "description": "ElevenLabs Enterprise 6-mo — May 2026",
+      "invoice_id": null
+    },
+    {
+      "id": "be_004",
+      "contract_id": "contract_001",
+      "customer_id": "cust_002",
+      "scheduled_date": "2026-06-01T00:00:00.000Z",
+      "amount": 2000000,
+      "status": "ready",
+      "period_start": "2026-06-01T00:00:00.000Z",
+      "period_end": "2026-06-30T00:00:00.000Z",
+      "description": "ElevenLabs Enterprise 6-mo — June 2026",
+      "invoice_id": null
+    },
+    {
+      "id": "be_005",
+      "contract_id": "contract_001",
+      "customer_id": "cust_002",
+      "scheduled_date": "2026-07-01T00:00:00.000Z",
+      "amount": 2000000,
+      "status": "ready",
+      "period_start": "2026-07-01T00:00:00.000Z",
+      "period_end": "2026-07-31T00:00:00.000Z",
+      "description": "ElevenLabs Enterprise 6-mo — July 2026",
+      "invoice_id": null
+    },
+    {
+      "id": "be_006",
+      "contract_id": "contract_001",
+      "customer_id": "cust_002",
+      "scheduled_date": "2026-08-01T00:00:00.000Z",
+      "amount": 2000000,
+      "status": "ready",
+      "period_start": "2026-08-01T00:00:00.000Z",
+      "period_end": "2026-08-31T00:00:00.000Z",
+      "description": "ElevenLabs Enterprise 6-mo — August 2026",
+      "invoice_id": null
+    },
+    {
+      "id": "be_1772658435274_ctuwz",
+      "contract_id": "contract_1772658435255_p6yod",
+      "customer_id": "cust_001",
+      "scheduled_date": "2026-03-01T00:00:00.000Z",
+      "amount": 500000,
+      "status": "invoiced",
+      "period_start": "2026-03-01T00:00:00.000Z",
+      "period_end": "2026-03-27T23:00:00.000Z",
+      "description": "Jane Smith Web Retainer — February 2026",
+      "invoice_id": "inv_1772658450006_cv416"
+    },
+    {
+      "id": "be_1772658435274_eau42",
+      "contract_id": "contract_1772658435255_p6yod",
+      "customer_id": "cust_001",
+      "scheduled_date": "2026-03-28T23:00:00.000Z",
+      "amount": 500000,
+      "status": "ready",
+      "period_start": "2026-03-28T23:00:00.000Z",
+      "period_end": "2026-04-27T23:00:00.000Z",
+      "description": "Jane Smith Web Retainer — March 2026",
+      "invoice_id": null
+    },
+    {
+      "id": "be_1772658435274_3r21u",
+      "contract_id": "contract_1772658435255_p6yod",
+      "customer_id": "cust_001",
+      "scheduled_date": "2026-04-28T23:00:00.000Z",
+      "amount": 500000,
+      "status": "ready",
+      "period_start": "2026-04-28T23:00:00.000Z",
+      "period_end": "2026-05-27T23:00:00.000Z",
+      "description": "Jane Smith Web Retainer — April 2026",
+      "invoice_id": null
+    }
+  ]
+}
